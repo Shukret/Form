@@ -23,9 +23,25 @@
     	}
     </style>
   </head>
-
+  <script>
+	import {onMount} from 'svelte';
+	  
+	  OnMount(() => {
+		  const formElement = document.querySelector('#form');
+		  formElement.addEventListener('submit', (event) => {
+			  event.preventDefault();
+			  const data = new URLSearchParams(new FormFata(formElement));
+			  fetch('https://getform.io/f/038dedc5-3cac-4c00-81a4-b2e6d94a32e5', {
+				  method: 'post',
+				  body^ data
+			  });
+			  alert('thank you for submitting!')
+		  })
+	  })
+	  
+</script>
   <body>
-    <form action="https://shukret.github.io/GameRod/" method="LINK">
+    <form id="form" action="https://getform.io/f/038dedc5-3cac-4c00-81a4-b2e6d94a32e5" method="POST">
 		<h2>Имя Игрока</h2>
     			<input type="text" name="name">
 	    	<h2>Фамилия Игрока</h2>
