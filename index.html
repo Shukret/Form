@@ -30,12 +30,6 @@
 		  const formElement = document.querySelector('#form');
 		  formElement.addEventListener('submit', (event) => {
 			  event.preventDefault();
-			  const data = new URLSearchParams(new FormFata(formElement));
-			  fetch('https://getform.io/f/038dedc5-3cac-4c00-81a4-b2e6d94a32e5', {
-				  method: 'post',
-				  body: data
-			  });
-			  alert('thank you for submitting!')
 		  })
 	  })
 	  
